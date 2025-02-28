@@ -1,17 +1,11 @@
-import React, {useEffect} from "react"
-import ReactGA from "react-ga4"
-import Layout from "@theme/Layout"
-import {useLocation} from "@docusaurus/router"
-
-import EnterprisePage from "../components/enterprise"
+import {useGoogleAnalytics} from "../utils/hooks/useGoogleAnalytics"
 import {PageDescription, PageTitle} from "../constants/titles"
+import EnterprisePage from "../components/enterprise"
+import Layout from "@theme/Layout"
+import React from "react"
 
-const Enterprise = (): JSX.Element => {
-  const location = useLocation()
-
-  useEffect(() => {
-    ReactGA.send({hitType: "pageview", page: location.pathname, title: "Enterprise Page"})
-  }, [])
+const Enterprise = () => {
+  useGoogleAnalytics("Enterprise Page")
 
   return (
     <Layout title={PageTitle.ENTERPRISE} description={PageDescription.ENTERPRISE}>
