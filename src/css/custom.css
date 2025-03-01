@@ -858,3 +858,11 @@ span.token.tag.script.language-javascript {
   background-size: 60px 60px;
   background-position: 3px 23px;
 }
+
+.tooltip {
+  @apply invisible absolute opacity-0 transition-opacity;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50 opacity-100;
+}
