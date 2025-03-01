@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "@docusaurus/module-type-aliases",
+      "@docusaurus/theme-classic",
+      "jest",
+      "node",
+      "@testing-library/jest-dom"
+    ]
+  }
+}

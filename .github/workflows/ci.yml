@@ -34,6 +34,7 @@ jobs:
           npm install
           npx prettier --check "**/*.{graphql,yml,json,md,sh,ts,tsx,js,css}"
           npm run build
+          npm run test
           npm run test:cypress
 
       - name: Deploy 🚀
